@@ -1,0 +1,38 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="serial_setup" id=";w)^vEg~|n[talNrtl[3" x="410" y="35">
+    <field name="SERIAL_ID">Serial</field>
+    <field name="SPEED">9600</field>
+  </block>
+  <block type="arduino_functions" id="9E.%Y9`m,9cn0:H`5!1H" x="832" y="20">
+    <statement name="LOOP_FUNC">
+      <block type="procedures_callnoreturn" id="CWrgOxeA2W,,ySwDU*Fj">
+        <mutation name="readPotvalue"></mutation>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="9U[XcC|k!PRR#xZ*rVTs" x="402" y="135">
+    <field name="NAME">readPotvalue</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="Qoci.^[iljtaOwt_I%67">
+        <field name="VAR">analogValue</field>
+        <value name="VALUE">
+          <block type="io_analogread" id=".eoiPzwWun|(y[g.#EE,">
+            <field name="PIN">A1</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_print" id="n9a%cS(Y#Y5u-w~/]fVb">
+            <field name="SERIAL_ID">Serial</field>
+            <field name="NEW_LINE">TRUE</field>
+            <value name="CONTENT">
+              <block type="variables_get" id="?1/i/7#nO`%KDA#?+dYe">
+                <field name="VAR">analogValue</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
