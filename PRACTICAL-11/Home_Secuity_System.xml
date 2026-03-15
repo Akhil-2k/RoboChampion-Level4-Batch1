@@ -1,0 +1,72 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="arduino_functions" id="kA5eE|S3.~iOH;%R*,EA" x="160" y="-551">
+    <statement name="LOOP_FUNC">
+      <block type="procedures_callnoreturn" id="xy/v0+a[Qk^8+Ml#Aa59">
+        <mutation name="doorOpened"></mutation>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="pE960#v#i#a%Ev2p!PjH" x="514" y="-376">
+    <field name="NAME">doorOpened</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="controls_if" id="@(DWQ^/?TD-t6vO{w|WI">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="procedures_callreturn" id="_J~0vvD)kpM-:SWw}T79">
+            <mutation name="readIRoutput"></mutation>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="io_digitalwrite" id="dGl2hbNNn3.BUsu]GO;/">
+            <field name="PIN">12</field>
+            <value name="STATE">
+              <block type="io_highlow" id="?u~)b-V*DkWg4qyGEsCd">
+                <field name="STATE">HIGH</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="io_digitalwrite" id="H-,(j=3B?juK=(W1q~eR">
+            <field name="PIN">12</field>
+            <value name="STATE">
+              <block type="io_highlow" id=".a8~TskBee2*!h@g(bLg">
+                <field name="STATE">LOW</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defreturn" id="i[XeH7%bdu/}X|d!xAEn" x="110" y="-235">
+    <field name="NAME">readIRoutput</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="S.Y|=k_my%s]{!_%Ld@+">
+        <field name="VAR">IR output</field>
+        <value name="VALUE">
+          <block type="io_digitalread" id=":t)`P3~4Xv1aRte_lf=#">
+            <field name="PIN">13</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="logic_compare" id="kQ@k?K[Yzgv#[sxF%B/I">
+        <field name="OP">EQ</field>
+        <value name="A">
+          <block type="variables_get" id="xmwzJHBC[jf13z=Y9Pki">
+            <field name="VAR">IR output</field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="math_number" id="xtsv{|Yia/8FD]hO/u[g">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>
