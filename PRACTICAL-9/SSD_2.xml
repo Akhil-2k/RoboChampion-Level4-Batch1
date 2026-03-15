@@ -1,0 +1,107 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="arduino_functions" id="zH~yC7R|49aWP}B{U/|B" x="178" y="3"></block>
+  <block type="procedures_defnoreturn" id="J[~SxsWu17AGe+ZKNU3f" x="427" y="235">
+    <field name="NAME">show 2</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="io_digitalwrite" id="BBIobHf{wMY+`.|Rk.3/">
+        <field name="PIN">2</field>
+        <value name="STATE">
+          <block type="io_highlow" id="4]Lvm|xM*`2BMFBH,9M2">
+            <field name="STATE">HIGH</field>
+          </block>
+        </value>
+        <next>
+          <block type="io_digitalwrite" id="]zz)mfFh!3^/)[k+!;gJ">
+            <field name="PIN">4</field>
+            <value name="STATE">
+              <block type="io_highlow" id="/Uh|~GJV6oxyai%]u,;Q">
+                <field name="STATE">HIGH</field>
+              </block>
+            </value>
+            <next>
+              <block type="io_digitalwrite" id="WR(eGFOjP-[r~JZ{f%;j">
+                <field name="PIN">7</field>
+                <value name="STATE">
+                  <block type="io_highlow" id="VhB21r|.=BR60xA[z8E%">
+                    <field name="STATE">HIGH</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="io_digitalwrite" id="oYiX:sxMLTZ@ieP%B;f%">
+                    <field name="PIN">8</field>
+                    <value name="STATE">
+                      <block type="io_highlow" id="txjg(s?=0yKOSe#=o[WW">
+                        <field name="STATE">HIGH</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="io_digitalwrite" id="*aLWSraHo|4C#i:%k^`A">
+                        <field name="PIN">12</field>
+                        <value name="STATE">
+                          <block type="io_highlow" id="+[SX-I(1H4C,gp3uv!PA">
+                            <field name="STATE">HIGH</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="io_digitalwrite" id="ch~HP]gxlZA5bNTIO;dJ">
+                            <field name="PIN">2</field>
+                            <value name="STATE">
+                              <block type="io_highlow" id=";!`E2Q5d-g`XAI)_f*Uf">
+                                <field name="STATE">HIGH</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="io_digitalwrite" id="H(/C9#*EfF1iuuCq6fuV">
+                                <field name="PIN">4</field>
+                                <value name="STATE">
+                                  <block type="io_highlow" id="P9_xusfb_]3Eeh/y=Zk@">
+                                    <field name="STATE">HIGH</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="io_digitalwrite" id="k_)NfH-{1l}w1?6*D7J^">
+                                    <field name="PIN">7</field>
+                                    <value name="STATE">
+                                      <block type="io_highlow" id="vkh32Rogc1AAWO7Kmpv1">
+                                        <field name="STATE">HIGH</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="io_digitalwrite" id=")3mbOH?92AaGJ.XiOQX.">
+                                        <field name="PIN">8</field>
+                                        <value name="STATE">
+                                          <block type="io_highlow" id="3Lf.lsIy%T[mTz4Or+Nj">
+                                            <field name="STATE">HIGH</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="io_digitalwrite" id="*J]_rEox0)g/30sDhsgg">
+                                            <field name="PIN">12</field>
+                                            <value name="STATE">
+                                              <block type="io_highlow" id="NHYf{gEONSZiO_JNUTZy">
+                                                <field name="STATE">HIGH</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
