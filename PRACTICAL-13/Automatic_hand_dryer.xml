@@ -1,0 +1,96 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="arduino_functions" id="dn%3n0}:VFV/=?Q/w}Vw" x="790" y="-10">
+    <statement name="LOOP_FUNC">
+      <block type="controls_if" id="y/WGTWggn+^i]nCo1DY_">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="NkRm+I@zld60#@E3fYz+">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="+V:986VSF/`?tv_T2xv(">
+                <field name="VAR">hand detect</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="d)^uC2xZr#U[v?-?c}7X">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="procedures_callnoreturn" id="3eW(=+yxc9yhytru:%V%">
+            <mutation name="motor on"></mutation>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="procedures_callnoreturn" id="ggEtCKPIf.g:-laIFYrc">
+            <mutation name="motor off"></mutation>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="Idmj[ld9`_z?{kSHWkA," x="395" y="139">
+    <field name="NAME">if Hand</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="_ukJM]|-!(!l8qnl}:S,">
+        <field name="VAR">hand detect</field>
+        <value name="VALUE">
+          <block type="io_digitalread" id="QMnQ8R,s(nMUh,0qf%o|">
+            <field name="PIN">10</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="fRW`:1ZJw-{nfu131m4N" x="713" y="277">
+    <field name="NAME">motor on</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="io_digitalwrite" id="uPzK{v!sgA9Yi/y;T/%h">
+        <field name="PIN">2</field>
+        <value name="STATE">
+          <block type="io_highlow" id="gX#FzU6%r*i/LGlC*`P}">
+            <field name="STATE">HIGH</field>
+          </block>
+        </value>
+        <next>
+          <block type="io_digitalwrite" id=",SdTELjffpWEvG}Br+x;">
+            <field name="PIN">3</field>
+            <value name="STATE">
+              <block type="io_highlow" id="nx-~:2gG:6%Ojnzm:-q{">
+                <field name="STATE">LOW</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="Q0cL+IAOi82#O!{7-=Lv" x="433" y="307">
+    <field name="NAME">motor off</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="io_digitalwrite" id="3mxKmK)DyQ4Sv-y_s0iv">
+        <field name="PIN">3</field>
+        <value name="STATE">
+          <block type="io_highlow" id="oo%7.XsZj@_l/Y:/E`v1">
+            <field name="STATE">LOW</field>
+          </block>
+        </value>
+        <next>
+          <block type="io_digitalwrite" id="VU_I*J@-VO%DWms!2%}1">
+            <field name="PIN">2</field>
+            <value name="STATE">
+              <block type="io_highlow" id="5XIj}#6Ef[;/=)SI4ut)">
+                <field name="STATE">LOW</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
